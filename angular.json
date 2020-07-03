@@ -39,7 +39,7 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [ "node_modules/jquery/dist/jquery.min.js" ]
           },
           "configurations": {
             "production": {
@@ -99,7 +99,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "styles": [],
-            "scripts": [],
+            "scripts": [ "node_modules/jquery/dist/jquery.min.js" ],
             "assets": [
               {
                 "glob": "favicon.ico",
@@ -128,7 +128,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -174,7 +176,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": "7bd50ec3-07e5-4077-b2e7-b69623ba056a"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
