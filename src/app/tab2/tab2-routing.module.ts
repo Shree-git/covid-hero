@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'statewide-stat',
     loadChildren: () => import('./statewide-stat/statewide-stat.module').then( m => m.StatewideStatPageModule)
+  },
+  {
+    path: 'predictive-index',
+    loadChildren: () => import('./predictive-index/predictive-index.module').then( m => m.PredictiveIndexPageModule)
   }
 ];
 

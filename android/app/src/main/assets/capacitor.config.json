@@ -1,0 +1,13 @@
+{
+  "appId": "com.riskybusiness.coviddetection",
+  "appName": "Covid Detection",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
