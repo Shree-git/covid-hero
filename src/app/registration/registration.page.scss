@@ -1,0 +1,54 @@
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+}
+  
+.line {
+    align-items: center;
+    margin: 1em -1em;
+    color: #cccccc;
+    
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+} 
+
+.one-line {
+    &:before,
+    &:after {
+       background: #cccccc;
+    }
+}
+
+.auth-form ion-grid,
+.auth-form ion-row {
+    height: 100%;
+    justify-content: center;
+}
+
+.already {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.loginBtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.loginBtns ion-button, .registerBtn{
+    margin: 15px;
+}
+
+.loginBtns ion-icon{
+    margin-right: 30px;
+}

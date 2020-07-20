@@ -10,6 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireStorageModule } from '@angular/fire/storage'
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { firebaseConfig } from './firebase'
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireMessagingModule,
     AppRoutingModule, 
     HttpClientModule],
   providers: [
