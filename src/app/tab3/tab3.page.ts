@@ -107,7 +107,7 @@ export class Tab3Page {
     let c = 2 * Math.atan2(Math.sqrt(ai), Math.sqrt(1 - ai));
     let d = (R * c) / 55;
     console.log(d);
-    if (d < 1.00) {
+    if (d < 12.00) {
       this.warningMsg1 = "Danger!!! COVID Red Zone!!! Please be alert";
     }
     else {
