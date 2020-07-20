@@ -24,3 +24,38 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.left-title{
+
+}
+
+.right-button{
+    float: right;
+    margin-top: 5px;
+}
+
+.two-cards{
+    display: flex;
+}
+
+.newImg{
+    height: 100px;
+    width: fit-content;
+}
+
+.icons-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.newsContent{
+    padding: 0 5px;
+    height: 60px;
+    overflow-y: hidden;
+}
+
+.flex-ion-content{
+    display: flex;
+    align-items: center;
+}
