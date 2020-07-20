@@ -16,7 +16,8 @@ export class Tab3Page {
   markers: any;
   latitude: number;
   longitude: number;
-  warningMsg: string;
+  warningMsg1: string;
+  warningMsg2: string;
   mapMarker;
   constructor() {
     // this.warningMsg = "No COVID hotspot nearby";
@@ -40,6 +41,10 @@ export class Tab3Page {
     let coords = new google.maps
       .LatLng(this.latitude, this.longitude);
 
+    let hotspot_lat = 39.8362;
+    let hotspot_lon = -86.1752;  
+    let hotspot_coords = new google.maps
+      .LatLng(hotspot_lat, hotspot_lon);
     let mapOptions = {
       center: coords,
       zoom: 13,
@@ -61,6 +66,13 @@ export class Tab3Page {
       animation: google.maps.Animation.DROP,
       title: "I am here"
     })
+
+    this.mapMarker = new google.maps.Marker({
+      position: hotspot_coords,
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      title: "12111 affected people"
+    })    
     this.mapMarker.addListener("click", this.toggleBounce);
     
     // popup.setMap(this.map);
@@ -95,11 +107,11 @@ export class Tab3Page {
     let c = 2 * Math.atan2(Math.sqrt(ai), Math.sqrt(1 - ai));
     let d = (R * c) / 55;
     console.log(d);
-    if (d < 12.00) {
-      this.warningMsg = "Danger!!! COVID Red Zone!!! Please be alert";
+    if (d < 1.00) {
+      this.warningMsg1 = "Danger!!! COVID Red Zone!!! Please be alert";
     }
     else {
-      this.warningMsg = "No COVID hotspot nearby";
+      this.warningMsg2 = "No COVID hotspot nearby";
     }
 
 
