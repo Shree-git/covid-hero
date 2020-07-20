@@ -9,7 +9,7 @@ import { PredictiveIndexPageRoutingModule } from './predictive-index-routing.mod
 import { PredictiveIndexPage } from './predictive-index.page';
 
 @NgModule({
-  imports: [
+  imports: [ 
     CommonModule,
     FormsModule,
     IonicModule,

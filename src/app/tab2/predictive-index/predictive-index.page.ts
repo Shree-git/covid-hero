@@ -31,7 +31,7 @@ export class PredictiveIndexPage implements OnInit {
     },
     {
       id: 2,
-      first: 'Marion',
+      first: 'Marion', 
     },
     {
       id: 3,
@@ -75,7 +75,7 @@ export class PredictiveIndexPage implements OnInit {
     if(this.selectedLevel==="Adams"){
       data1 = [1714, 2571, 3142, 4285, 5142, 6571];
       data2 = [606, 2727, 4578, 6935, 9634, 11824];
-      data3 = [1212, 1553, 2076, 1461, 1892, 2415];
+      data3 = [164, 810, 299, 178, 736, 1339];
     }
     if(this.selectedLevel==='Marion'){
       data1= [12992, 18101, 23207, 28325, 32216, 35646];
@@ -84,9 +84,9 @@ export class PredictiveIndexPage implements OnInit {
     }   
 
     if(this.selectedLevel==='Tippecanoe'){
-    data1 = [1714, 2571, 3142, 4285, 5142, 6571];
-    data2 = [606, 2727, 4578, 6935, 9634, 11824];
-    data3 = [1212, 1553, 2076, 1461, 1892, 2415];
+      data1 = [1714, 2571, 3142, 4285, 5142, 6571];
+      data2 = [606, 2727, 4578, 6935, 9634, 11824];
+      data3 = [1212, 1553, 2076, 1461, 1892, 2415];
   }
   
     this.barChartData[0].data = data1;
