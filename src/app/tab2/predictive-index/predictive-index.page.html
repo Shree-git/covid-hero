@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        This option predicts the corona virus cases in upcoming monthes in different counties based on Machine Learning algorithms - ETS and ARIMA and Neural Network
+      </ion-label>
+    </ion-list-header>
   
+    <ion-item>
+      <ion-label>County</ion-label>
+      <ion-select [(ngModel)]="selectedLevel" >
+        <ion-select-option *ngFor="let user of users" [ngValue]="user">{{user.first}}</ion-select-option>
+      </ion-select>
+      <ion-button (click)="selected()">Submit</ion-button>
+    </ion-item>
+     
+  </ion-list>
+
+  <div style="display: block;">
+    <canvas baseChart 
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  </div>
 </ion-content>
