@@ -47,9 +47,7 @@ export class AccountService {
       this.afStore.collection('accounts').doc<Account>(this.authService.user.uid).set({
         fName: account.fName,
         lName: account.lName,
-        role: 'client',
-        darkTheme: false,
-        mobileNumber: account.mobileNumber
+
       }).then((
         
       ) =>{
@@ -57,10 +55,6 @@ export class AccountService {
          id: this.authService.user.uid,
          fName: account.fName,
          lName: account.lName,
-         role: 'client',
-         darkTheme: false,
-         therapists: [],
-         mobileNumber: account.mobileNumber
        }
        // this.location.back()
       })
@@ -81,9 +75,6 @@ export class AccountService {
         id: this.authService.user.uid,
         fName: account.fName,
         lName: account.lName,
-        role: this.account.role,
-        darkTheme: this.account.darkTheme,
-        therapists: this.account.therapists,
         mobileNumber: this.account.mobileNumber
       }
       // this.location.back()
@@ -103,10 +94,6 @@ updateTheme(theme: boolean){
      id: this.authService.user.uid,
      fName: this.account.fName,
      lName: this.account.lName,
-     role: this.account.role,
-     darkTheme: theme,
-     therapists: this.account.therapists,
-     mobileNumber: this.account.mobileNumber
    }
    // this.location.back()
   })

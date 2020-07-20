@@ -89,7 +89,7 @@ export class AuthenticationService {
         return this.afAuth.createUserWithEmailAndPassword(email, password).then(()=>{
           if(this.isLoggedIn){
             console.log(this.user.uid)
-            this.updatePhotoURL("https://firebasestorage.googleapis.com/v0/b/choicesnew-a0046.appspot.com/o/images%2FChoicesProfile.png?alt=media&token=7afd3f21-7b16-4391-b66b-2ec31870ff38")
+            this.updatePhotoURL("https://firebasestorage.googleapis.com/v0/b/covid-detection-37cda.appspot.com/o/Covid%20Hero%20Icon.png?alt=media&token=3fcbcbc7-1bcf-4aaf-ab96-2fffd8b48e84")
             this.afStore.collection('users').doc(this.user.uid).set({uid: this.user.uid ,
                email: this.user.email,
               displayName: this.user.displayName,
@@ -250,7 +250,7 @@ export class AuthenticationService {
         localStorage.removeItem('user')
         console.log(this.user)
         window.location.reload();
-        this.router.navigate(['/login'])
+        this.router.navigate(['/registration'])
       })
     }
 

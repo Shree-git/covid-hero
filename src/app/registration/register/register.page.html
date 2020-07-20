@@ -58,27 +58,9 @@
             </ng-container>
           </div>
 
-          <ion-item>
-            <ion-label position="floating">Phone Number</ion-label>
-            <ion-input
-              formControlName="phoneNumber"
-              type="text"
-              
-            ></ion-input>
-          </ion-item>
+   
 
-          <div class="validation-errors">
-            <ng-container
-              *ngFor="let validation of validation_messages.phoneNumber"
-            >
-              <div
-                class="error-message"
-                *ngIf="registerForm.get('phoneNumber').hasError(validation.type) && (registerForm.get('phoneNumber').dirty || registerForm.get('phoneNumber').touched)"
-              >
-                {{ validation.message }}
-              </div>
-            </ng-container>
-          </div>
+         
 
           <ion-item>
             <ion-label position="floating">Email</ion-label>
