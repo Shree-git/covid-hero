@@ -73,8 +73,8 @@ export class PredictiveIndexPage implements OnInit {
     let data3= [];    
 
     if(this.selectedLevel==="Adams"){
-      data1 = [1714, 2571, 3142, 4285, 5142, 6571];
-      data2 = [606, 2727, 4578, 6935, 9634, 11824];
+      data1 = [159, 246, 357, 555, 842, 1085];
+      data2 = [306, 678, 945, 1274, 1575, 1857];
       data3 = [164, 810, 299, 178, 736, 1339];
     }
     if(this.selectedLevel==='Marion'){
