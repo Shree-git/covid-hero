@@ -1,0 +1,48 @@
+.reviewsBtn{
+    height: 20px;
+}
+
+.businessInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nameBss{
+    display: flex;
+    flex-direction: row;
+}
+
+.nameBss .infoSpan{
+    flex: 2;
+    justify-self: flex-start;
+}
+
+.nameBss .ratingSpan{
+    flex: 1;
+    justify-self: flex-end;
+}
+
+.nameBss .starsSpan{
+    flex: 1;
+    justify-self: flex-end;
+}
+
+.locationBss{
+    display: flex;
+}
+
+.locationBss .locationSpan{
+    flex: 1;
+    justify-self: center;
+}
+
+.btnsBss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnsBss .btns{
+    flex: 1
+}
