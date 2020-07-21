@@ -79,7 +79,7 @@ export class PredictiveIndexPage implements OnInit {
     }
     if(this.selectedLevel==='Marion'){
       data1= [12992, 18101, 23207, 28325, 32216, 35646];
-      data2= [14783, 20212, 23301,24513, 25723, 27168]; 
+      data2= [14783, 20212, 23301, 24513, 25723, 27168]; 
       data3= [12882, 12317, 13658, 12811, 13800, 15682];
     }   
 
