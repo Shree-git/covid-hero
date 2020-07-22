@@ -12,10 +12,10 @@ ion-card-title{
 }
 
 ion-card-header{
-    background-color: #efefef !important;
+    background-color:var(--ion-color-secondary) !important;
 
     ion-card-title{
-        color: #121212;
+        color: #efefef;
     }
 }
 
@@ -76,7 +76,7 @@ ion-card-header{
 
 .newsContent{
     padding: 0 5px;
-    height: 60px;
+    height: 65px;
     overflow-y: hidden;
 }
 

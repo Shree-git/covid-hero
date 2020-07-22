@@ -134,7 +134,7 @@ export const restaurantsData = [{
     "business_id": "tnhfDv5Il8EaGSXZGiuQGi",
 
     // string, the business's name
-    "name": "Taco Bell",
+    "name": "Domino's Pizza",
 
     // string, the full address of the business
     "address": "2110 Morthland Dr",
