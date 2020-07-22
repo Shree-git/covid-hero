@@ -66,12 +66,12 @@ export class Tab3Page {
       animation: google.maps.Animation.DROP,
       title: "I am here"
     })
-
+    //Modified : Sabrina Tarin Chowdhury
     this.mapMarker = new google.maps.Marker({
       position: hotspot_coords,
       map: this.map,
       animation: google.maps.Animation.DROP,
-      title: "12111 affected people"
+      title: "12111 affected people in Marion County"
     })    
     this.mapMarker.addListener("click", this.toggleBounce);
     
@@ -88,7 +88,7 @@ export class Tab3Page {
       this.mapMarker.setAnimation(google.maps.Animation.BOUNCE);
     }
   }
-
+//Modified : Sabrina Tarin Chowdhury
   async figureOutDistance() {
     let lat1 = this.latitude
     let lon1 = this.longitude
