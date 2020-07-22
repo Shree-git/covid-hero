@@ -12,26 +12,27 @@
   <ion-card *ngFor="let review of reviews | async">
     <ion-card-header>
       
-      <ion-card-title>User: {{review.userName}}</ion-card-title>
+      <ion-card-title>Reviewer: {{review.userName}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      
+    <ion-card-content style="margin-top:-15px;">
+
           <h2>Rating: {{review.rating}}</h2>
        
-      <ion-row>
+      <ion-row style="margin-top:-20px;">
         <ion-col>
           <h2>Review: {{review.review}}</h2>
         </ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row style="margin-top:-20px; margin-bottom: -15px;">
         <ion-col>
-          <h3>{{review.likes}} <ion-button size="small" (click)="sendLike(review.id, review.likes, review.dislikes)">
+          <h3 style="color: var(--ion-color-success);">{{review.likes}} <ion-button size="small" (click)="sendLike(review.id, review.likes, review.dislikes)">
             Helpful
-          </ion-button></h3>
+         
+          </ion-button> </h3>
           
         </ion-col>
         <ion-col>
-          <h3>{{review.dislikes}} <ion-button size="small" (click)="sendDislike(review.id, review.likes, review.dislikes)">
+          <h3 style="color: var(--ion-color-primary);">{{review.dislikes}} <ion-button size="small" (click)="sendDislike(review.id, review.likes, review.dislikes)">
             Not Helpful
           </ion-button></h3>
           

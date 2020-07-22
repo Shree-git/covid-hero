@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -16,6 +16,6 @@
   </div>
 </ion-content>
 <ion-footer>
-  <h2 style="color:red">{{ warningMsg1 }}</h2>
-  <h3 style="color:green">{{ warningMsg2 }}</h3>
+  <h2 style="color:var(--ion-color-primary)">{{ warningMsg1 }}</h2>
+  <h2 style="color:var(--ion-color-success)">{{ warningMsg2 }}</h2>
 </ion-footer>

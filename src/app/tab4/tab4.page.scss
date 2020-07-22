@@ -1,3 +1,23 @@
+// ion-content{
+//     --background: linear-gradient(197deg, var(--ion-color-primary), var(--ion-color-secondary)) !important;
+// }
+
+// ion-card{
+//     --background: linear-gradient(197deg, var(--ion-color-primary) 0%, 85%, var(--ion-color-dark) 100% ) !important;
+//     --color: #defdef !important;
+// }
+
+// ion-card-title{
+//     color:var(--ion-color-secondary-contrast);
+// }
+
+.buttonsRow{
+    display: flex;
+    justify-content: space-around;
+    // flex-basis: content;
+    
+}
+
 .reviewsBtn{
     height: 30px;
 }

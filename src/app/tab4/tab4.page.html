@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -8,33 +8,53 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar color="tertiary"></ion-searchbar>
+  <ion-searchbar color="medium"></ion-searchbar>
   <ion-card *ngFor="let restaurant of restaurantsData">
     <ion-card-content>
-      <ion-row>
+      <ion-row style="margin-bottom:-20px">
         <ion-col>
           <ion-card-title>{{restaurant.name}}</ion-card-title>
         </ion-col>
         <ion-row>
           <ion-col>
-            {{restaurant.stars}}
+            <h2 style="color:var(--ion-color-primary)">{{restaurant.stars}}  &#10026;</h2>
           </ion-col>
-          <ion-col>
-            Stars
-          </ion-col>
+        
         </ion-row>
       </ion-row>
 
-      <ion-row>
-        <ion-col>
-          {{restaurant.address}}, {{restaurant.city}}, {{restaurant.state}}, {{restaurant.postal}}
+      <ion-row >
+        <ion-col style="margin-bottom:0 !important;">
+          <ion-label>
+          <h3 style="font-weight: 600;">
+          {{restaurant.address}}, {{restaurant.city}}, {{restaurant.state}}, {{restaurant.postal_code}}
+        </h3>
+        <h4 style="margin-top:-20px" [ngStyle]="{color: restaurant.is_open == 1 ? 'var(--ion-color-success)' : 'var(--ion-color-primary)'}">
+          {{restaurant.is_open == 1 ? "Open" : "Closed"}} today
+        </h4>
+      </ion-label>
         </ion-col>
-        <ion-col>
+        
+      </ion-row>
+      <!-- <ion-row >
+        <ion-col >
           {{restaurant.is_open == 1 ? "Open" : "Closed"}} today
         </ion-col>
-      </ion-row>
+      </ion-row> -->
 
-      <ion-row>
+      <div class="buttonsRow" style="margin-top: -10px">
+        <div>
+          <ion-button class="reviewsBtn" [routerLink]="['./see-reviews', restaurant.business_id]"
+            >See Reviews</ion-button
+          >
+        </div>
+        <div>
+          <ion-button class="reviewsBtn" [routerLink]="['./post-review', restaurant.business_id]"
+            >Post a review</ion-button
+          >
+        </div>
+        </div>
+      <!-- <ion-row>
         <ion-col>
           <ion-button class="reviewsBtn" [routerLink]="['./see-reviews', restaurant.business_id]"
             >See Reviews</ion-button
@@ -45,7 +65,7 @@
             >Post a review</ion-button
           >
         </ion-col>
-      </ion-row>
+      </ion-row> -->
     </ion-card-content>
   </ion-card>
   <!-- <ion-card>

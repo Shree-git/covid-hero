@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -11,12 +11,12 @@
 
 <ion-content [fullscreen]="true">
  
-  <h2 style="text-align: center;">Monday, July 20, 2020</h2>
+  <h2 style="text-align: center; margin-top: 15px">Monday, July 20, 2020</h2>
   <ion-card>
-    <ion-card-header style="background-color: black;">
-      <ion-card-title style="color:white;">COVID-19 updates for your county:</ion-card-title>
+    <ion-card-header style="background-color: white;">
+      <ion-card-title style="color:black;">COVID-19 updates for your county:</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content style="margin-top:10px;">
       <ion-row>
         <ion-col>
           <ion-card-title>371</ion-card-title>
@@ -59,7 +59,7 @@
     <ion-card-content class="newsCardContent" style="padding-bottom: 0">
       <ion-spinner *ngIf="!articles" name="dots"></ion-spinner>
 
-      <ion-card color="tertiary" class="newsCard" *ngFor="let article of articles" href="{{article.url}}">
+      <ion-card class="newsCard" *ngFor="let article of articles" href="{{article.url}}">
         <img class="newImg" src="{{article.urlToImage}}">
 
       
@@ -92,7 +92,7 @@
     <ion-card-content>
       <ion-row>
         <ion-col>
-          <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon ionic-ios-stats@2x.png">How does your county compare?</ion-card-title>
+          <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon ionic-ios-stats@2x.png">How does your county compare?</ion-card-title>
           <ion-card-subtitle class="right-button" >Check Out the Statewide Statistics</ion-card-subtitle>
         </ion-col>
       </ion-row>
@@ -124,7 +124,7 @@
   <ion-card-content>
     <ion-row>
       <ion-col>
-        <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon open-graph@2x.png">Are we flattening the curve?</ion-card-title>
+        <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon open-graph@2x.png">Are we flattening the curve?</ion-card-title>
         <ion-card-subtitle class="right-button" >See our Prediction Index</ion-card-subtitle>
       </ion-col>
     </ion-row>
@@ -134,7 +134,7 @@
   <ion-card-content>
     <ion-row>
       <ion-col>
-        <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon awesome-newspaper@2x.png">Keep in the know</ion-card-title>
+        <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon awesome-newspaper@2x.png">Keep in the know</ion-card-title>
         <ion-card-subtitle class="right-button" >Check Out Today's Headlines</ion-card-subtitle>
       </ion-col>
     </ion-row>
