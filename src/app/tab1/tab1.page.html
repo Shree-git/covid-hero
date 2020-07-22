@@ -1,20 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title color="primary" class="ion-text-center">
+    <ion-title>
       Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar color="primary">
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
   <h2 style="text-align: center;">Monday, July 20, 2020</h2>
   <ion-card>
     <ion-card-header style="background-color: black;">
@@ -79,7 +75,7 @@
         </ion-card-content>
       </ion-card>
     </ion-card-content>
-    <ion-card-subtitle style="padding:0 20px 10px 0" class="right-button" routerLink="">Read More</ion-card-subtitle>
+    <ion-card-subtitle style="padding:0 20px 10px 0" class="right-button" href="https://www.google.com/search?q=covid-19+indiana+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj6xKuRiK_qAhVJAZ0JHdQkBswQ_AUoAXoECAwQAw&biw=1366&bih=625">Read More</ion-card-subtitle>
 
   </ion-card>
   <ion-card routerLink="/tabs/tab2/symptoms">
@@ -87,7 +83,7 @@
       <ion-row>
         <ion-col >
           <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon map-health@2x.png">Don't stress out over that cough.</ion-card-title>
-          <ion-card-subtitle class="right-button" >Find out about COVID-19 Symptoms</ion-card-subtitle>
+          <ion-card-subtitle class="right-button">Find out about COVID-19 Symptoms</ion-card-subtitle>
         </ion-col>
       </ion-row>
     </ion-card-content>
@@ -124,7 +120,7 @@
     </ion-card-content>
   </ion-card>
 </div>
-<ion-card routerLink="">
+<ion-card routerLink="/tabs/tab2/predictive-index">
   <ion-card-content>
     <ion-row>
       <ion-col>
@@ -134,7 +130,7 @@
     </ion-row>
   </ion-card-content>
 </ion-card>
-<ion-card routerLink="">
+<ion-card href="https://www.google.com/search?q=covid-19+indiana+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj6xKuRiK_qAhVJAZ0JHdQkBswQ_AUoAXoECAwQAw&biw=1366&bih=625">
   <ion-card-content>
     <ion-row>
       <ion-col>

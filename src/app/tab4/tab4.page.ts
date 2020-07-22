@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantsService } from '../services/restaurants.service';
 
 @Component({
   selector: 'app-tab4',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
-  constructor() { }
+  restaurantsData;
+  constructor(private rService: RestaurantsService) { }
 
   ngOnInit() {
+    this.restaurantsData = this.rService.getAllRestaurants();
   }
 
+  
 }

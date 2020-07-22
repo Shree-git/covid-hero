@@ -3,38 +3,38 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab4"></ion-back-button>
     </ion-buttons>
-    <ion-title>Reviews</ion-title>
+    <ion-title>{{business.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  
+  <ion-card *ngFor="let review of reviews | async">
     <ion-card-header>
-      <span>Business Name</span>
+      
+      <ion-card-title>User: {{review.userName}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      
+          <h2>Rating: {{review.rating}}</h2>
+       
       <ion-row>
         <ion-col>
-          <h3>Review Title</h3>
+          <h2>Review: {{review.review}}</h2>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <h4>Review Content</h4>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <h5>58</h5>
-          <ion-button size="small">
+          <h3>{{review.likes}} <ion-button size="small" (click)="sendLike(review.id, review.likes, review.dislikes)">
             Helpful
-          </ion-button>
+          </ion-button></h3>
+          
         </ion-col>
         <ion-col>
-          <h5>3</h5>
-          <ion-button size="small">
+          <h3>{{review.dislikes}} <ion-button size="small" (click)="sendDislike(review.id, review.likes, review.dislikes)">
             Not Helpful
-          </ion-button>
+          </ion-button></h3>
+          
         </ion-col>
       </ion-row>
       

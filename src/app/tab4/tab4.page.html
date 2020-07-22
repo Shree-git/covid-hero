@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -9,7 +9,46 @@
 
 <ion-content>
   <ion-searchbar color="tertiary"></ion-searchbar>
-  <ion-card>
+  <ion-card *ngFor="let restaurant of restaurantsData">
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-card-title>{{restaurant.name}}</ion-card-title>
+        </ion-col>
+        <ion-row>
+          <ion-col>
+            {{restaurant.stars}}
+          </ion-col>
+          <ion-col>
+            Stars
+          </ion-col>
+        </ion-row>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          {{restaurant.address}}, {{restaurant.city}}, {{restaurant.state}}, {{restaurant.postal}}
+        </ion-col>
+        <ion-col>
+          {{restaurant.is_open == 1 ? "Open" : "Closed"}} today
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="reviewsBtn" [routerLink]="['./see-reviews', restaurant.business_id]"
+            >See Reviews</ion-button
+          >
+        </ion-col>
+        <ion-col>
+          <ion-button class="reviewsBtn" [routerLink]="['./post-review', restaurant.business_id]"
+            >Post a review</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card>
     <ion-card-content>
       <ion-row>
         <ion-col>
@@ -47,7 +86,7 @@
         </ion-col>
       </ion-row>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
   <!-- <ion-card>
     <ion-card-content>
       <div class="businessInfo">

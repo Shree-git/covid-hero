@@ -19,6 +19,7 @@ export class AuthenticationService {
   // userData: any
   user: User
   usersRef
+  
 
   constructor(
     private afAuth: AngularFireAuth,
