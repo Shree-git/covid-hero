@@ -32,6 +32,17 @@ export class Tab3Page {
   boxShelby;
   boxBoone;
   boxMadison;
+  boxPorter;
+  boxLaPorte;
+  boxSTjoseph;
+  boxELKhart;
+  boxTipton;
+  boxMarshall;
+  boxPulaski;
+  boxTippecanoe;
+  boxHoward;
+  boxMonroe;
+  boxStarke;
   constructor() {
     // this.warningMsg = "No COVID hotspot nearby";
   }
@@ -146,6 +157,66 @@ export class Tab3Page {
       }
     });
 
+    this.boxPorter = new google.maps.Rectangle({
+      strokeColor: "#ADFF2F",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#ADFF2F",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.624,
+        south: 41.244,
+        east: -86.93,
+        west: -87.22
+      }
+    });
+
+    this.boxTippecanoe = new google.maps.Rectangle({
+      strokeColor: "#ADFF2F",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#ADFF2F",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 40.56378,
+        south: 40.217848,
+        east: -86.6969,
+        west: -87.0946
+      }
+    });
+
+    this.boxMarshall = new google.maps.Rectangle({
+      strokeColor: "#ADFF2F",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#ADFF2F",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.4777,
+        south: 41.1714,
+        east: -86.058026,
+        west: -86.467266
+      }
+    });
+
+    this.boxLaPorte = new google.maps.Rectangle({
+      strokeColor: "#ADFF2F",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#ADFF2F",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.76,
+        south: 41.2668,
+        east: -86.50,
+        west: -86.93
+      }
+    });
+
     this.boxRush = new google.maps.Rectangle({
       strokeColor: "#008000",
       strokeOpacity: 0.8,
@@ -158,6 +229,36 @@ export class Tab3Page {
         south: 39.45,
         east: -85.30,
         west: -85.63
+      }
+    });
+
+    this.boxTipton = new google.maps.Rectangle({
+      strokeColor: "#006400",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#006400",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 40.406127,
+        south: 40.218750,
+        east: -85.86,
+        west: -86.243103
+      }
+    });
+
+    this.boxStarke = new google.maps.Rectangle({
+      strokeColor: "#006400",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#006400",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.295837,
+        south: 41.172392,
+        east: -86.4681,
+        west: -86.9297
       }
     });
 
@@ -220,7 +321,52 @@ export class Tab3Page {
         east: -86.24,
         west: -86.69
       }
-    });      
+    }); 
+
+    this.boxMonroe = new google.maps.Rectangle({
+      strokeColor: "#008000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#008000",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 39.3409,
+        south: 38.99,
+        east: -86.35,
+        west: -86.68
+      }
+    }); 
+    
+    this.boxHoward = new google.maps.Rectangle({
+      strokeColor: "#008000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#008000",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 40.5632,
+        south: 40.4044,
+        east: -85.86,
+        west: -86.377
+      }
+    }); 
+    
+    this.boxPulaski = new google.maps.Rectangle({
+      strokeColor: "#008000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#008000",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.1718,
+        south: 40.912885,
+        east: -86.4683,
+        west: -86.9318
+      }
+    });  
 
 
     this.boxAllen = new google.maps.Rectangle({
@@ -253,6 +399,36 @@ export class Tab3Page {
       }
     });
 
+    this.boxSTjoseph = new google.maps.Rectangle({
+      strokeColor: "#FFFF00",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FFFF00",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.76,
+        south: 41.4579,
+        east: -86.061413,
+        west: -86.5210
+      }
+    });
+
+    this.boxELKhart = new google.maps.Rectangle({
+      strokeColor: "#FFFF00",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FFFF00",
+      fillOpacity: 0.35,
+      map:this.map,
+      bounds: {
+        north: 41.762558,
+        south: 41.435943,
+        east: -85.656753,
+        west: -86.061207
+      }
+    });
+
     this.boxHamilton = new google.maps.Rectangle({
       strokeColor: "#FFFF00",
       strokeOpacity: 0.8,
@@ -269,10 +445,10 @@ export class Tab3Page {
     });    
 
     this.boxHendricks = new google.maps.Rectangle({
-      strokeColor: "#FFFF00",
+      strokeColor: "#FFA500",
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: "#FFFF00",
+      fillColor: "#FFA500",
       fillOpacity: 0.35,
       map:this.map,
       bounds: {
@@ -312,7 +488,17 @@ export class Tab3Page {
     this.boxShelby.addListener("click", this.toggleBounce);
     this.boxBoone.addListener("click", this.toggleBounce);
     this.boxMadison.addListener("click", this.toggleBounce);
-    
+    this.boxPorter.addListener("click", this.toggleBounce);
+    this.boxLaPorte.addListener("click", this.toggleBounce);
+    this.boxSTjoseph.addListener("click", this.toggleBounce);
+    this.boxELKhart.addListener("click", this.toggleBounce);
+    this.boxTipton.addListener("click", this.toggleBounce);
+    this.boxMarshall.addListener("click", this.toggleBounce);
+    this.boxPulaski.addListener("click", this.toggleBounce);
+    this.boxTippecanoe.addListener("click", this.toggleBounce);
+    this.boxHoward.addListener("click", this.toggleBounce);
+    this.boxMonroe.addListener("click", this.toggleBounce);
+    this.boxStarke.addListener("click", this.toggleBounce);
     // popup.setMap(this.map);
 
     // mapMarker.setMap(this.map)
@@ -335,6 +521,17 @@ export class Tab3Page {
       this.boxShelby.setAnimation(null);
       this.boxBoone.setAnimation(null);
       this.boxMadison.setAnimation(null);
+      this.boxPorter.setAnimation(null);
+      this.boxLaPorte.setAnimation(null);
+      this.boxSTjoseph.setAnimation(null);
+      this.boxELKhart.setAnimation(null);
+      this.boxTipton.setAnimation(null);
+      this.boxMarshall.setAnimation(null);
+      this.boxPulaski.setAnimation(null);
+      this.boxTippecanoe.setAnimation(null);
+      this.boxHoward.setAnimation(null);
+      this.boxMonroe.setAnimation(null);
+      this.boxStarke.setAnimation(null);
     } else {
       this.mapMarker.setAnimation(google.maps.Animation.BOUNCE);
       //this.cityCircle.setAnimation(google.maps.Animation.BOUNCE);
@@ -350,6 +547,17 @@ export class Tab3Page {
       this.boxShelby.setAnimation(google.maps.Animation.BOUNCE);
       this.boxBoone.setAnimation(google.maps.Animation.BOUNCE);
       this.boxMadison.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxPorter.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxLaPorte.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxSTjoseph.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxELKhart.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxTipton.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxMarshall.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxPulaski.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxTippecanoe.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxHoward.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxMonroe.setAnimation(google.maps.Animation.BOUNCE);
+      this.boxStarke.setAnimation(google.maps.Animation.BOUNCE);
     }
   }
 //Modified : Sabrina Tarin Chowdhury
