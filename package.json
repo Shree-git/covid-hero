@@ -33,7 +33,6 @@
     "@types/google-maps": "^3.2.2",
     "chart.js": "^2.9.3",
     "chartjs-plugin-zoom": "^0.7.7",
-    "ng2-charts": "^2.2.4",
     "firebase": "^7.16.0",
     "ng2-charts": "^2.2.4",
     "rxjs": "~6.5.1",
