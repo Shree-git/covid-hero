@@ -9,28 +9,12 @@
 
 <ion-content>
   <div class="mainDiv">
-    <!-- <ion-grid>
-      <ion-row>
-      <ion-col size="6" >
-        <ion-img src="{{ photoService.photo.base64 ? photoService.photo.base64 : photoService.photo.webviewPath }}"></ion-img>
-      </ion-col>
-      </ion-row>
-    </ion-grid> -->
+  
     <ion-img style="height:200px; width:200px" [src]="downloadURL"></ion-img>
-    <!-- <ion-button (click)="photoService.addNewToGallery()">
-      <ion-icon name="camera" slot="icon-only"></ion-icon>
-    </ion-button> -->
-    
-    <!-- <ion-label for="fileInput" icon-only ion-button id="tempFileInput">
-      <ion-icon name="image"></ion-icon>
-    </ion-label> -->
-    <!-- <div class="fileUpload"> -->
-      <!-- <ion-button color="secondary">
-        <ion-icon name="image"></ion-icon>
-      </ion-button> -->
+
       <input type="file" name="file" id="file" class="inputfile" (change)="photoChanged($event)">
       <label for="file">Choose an image</label>
-  <!-- </div> -->
+
     <ion-button expand="block" (click)="savePhoto()" color="tertiary">
       <ion-icon name="cloud-upload-outline" style="margin-right: 10px"></ion-icon>Upload</ion-button>
   </div>

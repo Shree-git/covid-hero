@@ -13,7 +13,6 @@ export class PasswordResetPage implements OnInit {
    
     password: [
       { type: 'required', message: 'Password is required' },
-      // { type: 'pattern', message: 'Please enter a valid password' },
       { type: 'minLength', message: 'Password must be over 5 characters' }
     ],
     cpassword: [
@@ -27,7 +26,6 @@ export class PasswordResetPage implements OnInit {
       password: ['', Validators.compose([
         Validators.minLength(5),
         Validators.required,
-        // Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
       ])],
       cpassword: ['', Validators.required]
     }, { 

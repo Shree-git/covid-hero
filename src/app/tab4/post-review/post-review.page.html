@@ -47,12 +47,7 @@
         <ion-label position="floating">Share your review about how COVID safe the place is</ion-label>
         <ion-textarea auto-grow="true" rows="4" [(ngModel)]="review"></ion-textarea>
       </ion-item>
-      <!-- <ion-item>
-        <ion-label>Question 2</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-textarea placeholder="Answer to question 1"></ion-textarea>
-      </ion-item> -->
+  
 
         <ion-button expand="block" [disabled]="ratingScore == null || review == ''" (click)="postReview()">
           Post review

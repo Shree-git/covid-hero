@@ -83,16 +83,7 @@ export class AccountService {
 
 
 getAccount(): Account{
- // this.afStore.collection('users').doc(this.authService.user.uid).collection('accounts').
- // snapshotChanges().pipe(
- //   map(actions => {
- //     actions.map(a => {
- //       const data = a.payload.doc.data();
- //       this.account.fName = data.firstName
- //       this.account.lName = data.lastName
- //       this.account.id = a.payload.doc.id
- //     });
- //   }));
+
    this.afStore.collection('accounts').doc<Account>
    (this.authService.user.uid).
    valueChanges().pipe(

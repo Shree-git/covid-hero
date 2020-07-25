@@ -18,11 +18,6 @@ export class RestaurantsService {
 
   getAllRestaurants() {
 
-    // console.log(this.http.get('https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco'))
-    // this.http.get('https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco').subscribe(res=>{
-    //   console.log(res)
-    // });
-
     return restaurantsData;
   }
 

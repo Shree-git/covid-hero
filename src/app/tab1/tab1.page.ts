@@ -17,10 +17,5 @@ export class Tab1Page {
       this.articles = data['articles']
       this.date = new Date();
     })
-
-    // this.newsApiService.getCases().subscribe(data=>{
-    //   console.log(data)
-    // })
-    // console.log(this.newsApiService.getCases())
   }
 }

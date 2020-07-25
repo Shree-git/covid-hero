@@ -29,36 +29,11 @@ export class TabsPage implements OnInit{
     public authService: AuthenticationService,
     public accountService: AccountService,
     private platform: Platform,
-    // private networkStatus: NetworkStatus,
-    // private networkListener: PluginListenerHandle,
     private router: Router,
     private alertCtrl: AlertController, 
-    // public msg: MessagingService
+
   ) {
-//               // watch network for a disconnection
-// let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
-//   console.log('network was disconnected :-(');
-// });
 
-// // stop disconnect watch
-// disconnectSubscription.unsubscribe();
-
-
-// // watch network for a connection
-// let connectSubscription = this.network.onConnect().subscribe(() => {
-//   console.log('network connected!');
-//   // We just got a connection but we need to wait briefly
-//    // before we determine the connection type. Might need to wait.
-//   // prior to doing any api requests as well.
-//   setTimeout(() => {
-//     if (this.network.type === 'wifi') {
-//       console.log('we got a wifi connection, woohoo!');
-//     }
-//   }, 3000);
-// });
-
-// // stop connect watch
-// connectSubscription.unsubscribe();
    }
 
  
@@ -81,36 +56,19 @@ export class TabsPage implements OnInit{
           message: 'Connect to the internet to use the application.',
           cssClass: 'buttonCss',
           backdropDismiss: false,
-          // buttons: [{
-          //   text: 'Delete',
-          //   cssClass: 'first-button',
-          //   handler: ()=>{ this.impulseService.deleteImpulse(id) }
-          // },
-          // {
-          //   text: 'Cancel',
-          //   cssClass: 'second-button',
-          //   role: 'cancel'
-          // }]
+         
         })
         await alert.present()
         
         
       }else{
-        // alert.dismiss();
+    
         alert.dismiss();
       }
     });
 
     this.networkStatus = await Network.getStatus();
-    // if(this.authService.user){
-    //   this.msg.getPermission(this.authService.user)
-    //   this.msg.monitorRefresh(this.authService.user)
-    //   this.msg.receiveMessages()
-    // }
-    
-    // this.getUser()
-    // console.log(this.user.photoURL)
-    // console.log(this.user.uid)
+  
   }
 
   
@@ -121,18 +79,7 @@ export class TabsPage implements OnInit{
     this.getPhoto()
   }
 
-  // ngAfterViewInit(){
-  //   this.backButtonSubscription = this.platform.backButton.subscribeWithPriority(666666, ()=>{
-  //     if(this.constructor.name == "TabsPage"){
-  //        navigator['app'].exitApp();
-  //     }
-  //   })
-  // }
-
-  // ngOnDestroy(){
-  //   this.backButtonSubscription.unsubscribe();
-  // }
-
+ 
   ionViewDidEnter(){ this.backButtonSubscription = this.platform.backButton.subscribe(()=>{ 
     if ((this.router.isActive('/tabs/tab1', true) && this.router.url === '/tabs/tab1') || 
     (this.router. isActive('/tabs/tab3', true) && this.router.url === '/tabs/tab3') || 
@@ -170,11 +117,7 @@ export class TabsPage implements OnInit{
       url: '/tabs/tab4',
       icon: 'restaurant'
     },
-    // {
-    //   title: 'News',
-    //   url: '/tabs/inbox',
-    //   icon: 'chatbox-ellipses'
-    // }
+
   ]
   }
 
