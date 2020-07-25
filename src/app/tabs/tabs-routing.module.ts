@@ -24,10 +24,12 @@ const routes: Routes = [
         loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
       {
+
         path: 'settings',
         loadChildren: () => import('../settings/settings.module').then( m => m.SettingsPageModule)
       },
       {
+
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-post-review',
@@ -8,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./post-review.page.scss'],
 })
 export class PostReviewPage implements OnInit {
+
   ratingScore;
   review: string;
   businessId: string;
@@ -31,4 +34,5 @@ export class PostReviewPage implements OnInit {
       this.router.navigate(['/tabs/tab4']);
     });
   }
+
 }

@@ -4,6 +4,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 
+
+
 import { app } from 'firebase';
 import { AlertController } from '@ionic/angular';
 
@@ -16,9 +18,11 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AuthenticationService {
 
+
   user: User
   usersRef
   
+
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -28,9 +32,11 @@ export class AuthenticationService {
  
     ) {
 
+
       this.user = JSON.parse(localStorage.getItem('user'))
       this.afAuth.onAuthStateChanged((user)=>{
       
+
         
      
           if (user) {
@@ -46,11 +52,15 @@ export class AuthenticationService {
         })
       
 
+
+
      }
 
      login(email, password){
         return this.afAuth.signInWithEmailAndPassword(email, password)
      }
+
+
 
      register(email, password){
     
@@ -224,6 +234,8 @@ export class AuthenticationService {
 
 
 
+
+
     updatePhotoURL(pURL){
      
       this.afAuth.onAuthStateChanged((user)=>{
@@ -259,6 +271,6 @@ export class AuthenticationService {
       return user
     }
 
-   
+
     
 }

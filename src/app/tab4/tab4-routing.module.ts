@@ -9,11 +9,13 @@ const routes: Routes = [
     component: Tab4Page
   },
   {
+
     path: 'see-reviews/:business',
     loadChildren: () => import('./see-reviews/see-reviews.module').then( m => m.SeeReviewsPageModule)
   },
   {
     path: 'post-review/:business',
+
     loadChildren: () => import('./post-review/post-review.module').then( m => m.PostReviewPageModule)
   }
 ];

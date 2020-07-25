@@ -82,8 +82,8 @@ export class AccountService {
 
 
 
-getAccount(): Account{
 
+getAccount(): Account{
    this.afStore.collection('accounts').doc<Account>
    (this.authService.user.uid).
    valueChanges().pipe(

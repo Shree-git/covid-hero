@@ -29,11 +29,14 @@ export class TabsPage implements OnInit{
     public authService: AuthenticationService,
     public accountService: AccountService,
     private platform: Platform,
+
     private router: Router,
     private alertCtrl: AlertController, 
 
   ) {
 
+
+  
    }
 
  
@@ -56,12 +59,13 @@ export class TabsPage implements OnInit{
           message: 'Connect to the internet to use the application.',
           cssClass: 'buttonCss',
           backdropDismiss: false,
-         
+
         })
         await alert.present()
         
         
       }else{
+
     
         alert.dismiss();
       }
@@ -73,13 +77,16 @@ export class TabsPage implements OnInit{
 
   
 
+
   ionViewWillEnter(){
     this.getAccount()
     this.sideMenu()
     this.getPhoto()
   }
 
+
  
+
   ionViewDidEnter(){ this.backButtonSubscription = this.platform.backButton.subscribe(()=>{ 
     if ((this.router.isActive('/tabs/tab1', true) && this.router.url === '/tabs/tab1') || 
     (this.router. isActive('/tabs/tab3', true) && this.router.url === '/tabs/tab3') || 

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 import { Observable } from 'rxjs';
 import { Review } from 'src/app/models/review.model';
+
 
 @Component({
   selector: 'app-see-reviews',
@@ -10,6 +12,7 @@ import { Review } from 'src/app/models/review.model';
   styleUrls: ['./see-reviews.page.scss'],
 })
 export class SeeReviewsPage implements OnInit {
+
   businessId: string;
   business;
   reviews: Observable<Review[]>
@@ -36,4 +39,5 @@ export class SeeReviewsPage implements OnInit {
     let dislikes: number = dislike + 1;
     this.restaurantService.updateLikes(this.businessId, reviewId, like, dislikes)
   }
+
 }

@@ -18,7 +18,6 @@ import { firebaseConfig } from './firebase'
 
 
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

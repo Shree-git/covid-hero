@@ -3,11 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab4"></ion-back-button>
     </ion-buttons>
+
     <ion-title>{{business.name}}</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   
   <ion-card *ngFor="let review of reviews | async">
     <ion-card-header>
@@ -36,6 +39,7 @@
             Not Helpful
           </ion-button></h3>
           
+
         </ion-col>
       </ion-row>
       
