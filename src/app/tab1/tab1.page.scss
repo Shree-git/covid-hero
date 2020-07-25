@@ -1,3 +1,28 @@
+ion-content{
+    // --background: linear-gradient(197deg, var(--ion-color-primary), var(--ion-color-secondary)) !important;
+}
+
+ion-card{
+    // --background: linear-gradient(197deg, var(--ion-color-primary) 0%, 85%, #103323 100% ) !important;
+    // --color: #defdef !important;
+}
+
+ion-card-title{
+    color:var(--ion-color-secondary-contrast);
+}
+
+ion-card-header{
+    background-color:var(--ion-color-secondary) !important;
+
+    ion-card-title{
+        color: #efefef;
+    }
+}
+
+.whiteIcon{
+    background-color: #efefef
+}
+
 .newsCardContent{
     display: flex;
     flex-direction: row;
@@ -51,7 +76,9 @@
 
 .newsContent{
     padding: 0 5px;
-    height: 60px;
+
+    height: 65px;
+
     overflow-y: hidden;
 }
 

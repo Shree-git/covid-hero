@@ -3,24 +3,24 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title color="primary" class="ion-text-center">
+
+    <ion-title>
+
       Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar color="primary">
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <h2 style="text-align: center;">Monday, July 20, 2020</h2>
+
+ 
+  <h2 style="text-align: center; margin-top: 15px">{{date |date: 'fullDate'}}</h2>
   <ion-card>
-    <ion-card-header style="background-color: black;">
-      <ion-card-title style="color:white;">COVID-19 updates for your county:</ion-card-title>
+    <ion-card-header>
+      <ion-card-title>COVID-19 updates for your county:</ion-card-title>
+
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content style="margin-top:10px;">
       <ion-row>
         <ion-col>
           <ion-card-title>371</ion-card-title>
@@ -36,13 +36,16 @@
         </ion-col>
         <ion-col>
           <ion-card-title>8%</ion-card-title>
-          <ion-card-subtitle>Positivity</ion-card-subtitle>
+
+          <ion-card-subtitle>positivity rate</ion-card-subtitle>
+
         </ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
   <ion-card>
     <ion-card-header>
+
       <ion-card-title>Day-By-Day Statistics:</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -58,28 +61,22 @@
   </ion-card>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Top COVID News in Indiana today</ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="newsCardContent" style="padding-bottom: 0">
-      <ion-spinner *ngIf="!articles" name="dots"></ion-spinner>
 
-      <ion-card color="tertiary" class="newsCard" *ngFor="let article of articles" href="{{article.url}}">
+      <ion-card class="newsCard" *ngFor="let article of articles" href="{{article.url}}" color="secondary">
+
         <img class="newImg" src="{{article.urlToImage}}">
 
       
         <ion-card-content class="newsContent">
           <ion-card-subtitle>{{article.title}}</ion-card-subtitle>
 
-          <!-- <p>
-            {{article.description}}
-          </p> -->
-          <!-- <ion-button ion-button fill="outline" href="{{article.url}}" large
-            >Read full article</ion-button
-          > -->
+
+    
         </ion-card-content>
       </ion-card>
     </ion-card-content>
-    <ion-card-subtitle style="padding:0 20px 10px 0" class="right-button" routerLink="">Read More</ion-card-subtitle>
+    <ion-card-subtitle style="padding:0 20px 10px 0" color="primary" class="right-button" href="https://www.google.com/search?q=covid-19+indiana+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj6xKuRiK_qAhVJAZ0JHdQkBswQ_AUoAXoECAwQAw&biw=1366&bih=625">Read More</ion-card-subtitle>
+
 
   </ion-card>
   <ion-card routerLink="/tabs/tab2/symptoms">
@@ -87,17 +84,22 @@
       <ion-row>
         <ion-col >
           <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon map-health@2x.png">Don't stress out over that cough.</ion-card-title>
-          <ion-card-subtitle class="right-button" >Find out about COVID-19 Symptoms</ion-card-subtitle>
+
+          <ion-card-subtitle color="primary" class="right-button">Find out about COVID-19 Symptoms</ion-card-subtitle>
+
         </ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
+
   <ion-card routerLink="/tabs/tab2/statewide-stat">
     <ion-card-content>
+
+
       <ion-row>
         <ion-col>
-          <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon ionic-ios-stats@2x.png">How does your county compare?</ion-card-title>
-          <ion-card-subtitle class="right-button" >Check Out the Statewide Statistics</ion-card-subtitle>
+          <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon ionic-ios-stats@2x.png">How does your county compare?</ion-card-title>
+          <ion-card-subtitle color="primary" class="right-button" >Check Out the Statewide Statistics</ion-card-subtitle>
         </ion-col>
       </ion-row>
     </ion-card-content>
@@ -108,7 +110,7 @@
       <ion-row>
         <ion-col>
           <img style="margin-right: 0 !important;" class="icons-img" src="assets/iconsImage/Icon ionic-ios-paper@2x.png">
-          <ion-card-subtitle>Take a Self-Assessment Test</ion-card-subtitle>
+          <ion-card-subtitle color="primary">Take a Self-Assessment Test</ion-card-subtitle>
         </ion-col>
       </ion-row>
     </ion-card-content>
@@ -118,47 +120,31 @@
       <ion-row>
         <ion-col>
           <img style="margin-right: 0 !important;" class="icons-img" src="assets/iconsImage/Icon map-doctor@2x.png">
-          <ion-card-subtitle >Find a testing center</ion-card-subtitle>
+          <ion-card-subtitle color="primary">Find a testing center</ion-card-subtitle>
         </ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
 </div>
-<ion-card routerLink="">
+<ion-card routerLink="/tabs/tab2/predictive-index">
   <ion-card-content>
     <ion-row>
       <ion-col>
-        <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon open-graph@2x.png">Are we flattening the curve?</ion-card-title>
-        <ion-card-subtitle class="right-button" >See our Prediction Index</ion-card-subtitle>
+        <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon open-graph@2x.png">Are we flattening the curve?</ion-card-title>
+        <ion-card-subtitle class="right-button" color="primary">See our Prediction Index</ion-card-subtitle>
       </ion-col>
     </ion-row>
   </ion-card-content>
 </ion-card>
-<ion-card routerLink="">
+<ion-card href="https://www.google.com/search?q=covid-19+indiana+news&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj6xKuRiK_qAhVJAZ0JHdQkBswQ_AUoAXoECAwQAw&biw=1366&bih=625">
   <ion-card-content>
     <ion-row>
       <ion-col>
-        <ion-card-title class="flex-ion-content left-title"><img class="icons-img" src="assets/iconsImage/Icon awesome-newspaper@2x.png">Keep in the know</ion-card-title>
-        <ion-card-subtitle class="right-button" >Check Out Today's Headlines</ion-card-subtitle>
+        <ion-card-title class="flex-ion-content left-title"><img class="icons-img whiteIcon" src="assets/iconsImage/Icon awesome-newspaper@2x.png">Keep in the know</ion-card-title>
+        <ion-card-subtitle class="right-button" color="primary">Check Out Today's Headlines</ion-card-subtitle>
       </ion-col>
     </ion-row>
   </ion-card-content>
 </ion-card>
-  <!-- <ion-card>
-    <ion-header>
-      <ion-title>Day-by-Day Metrics</ion-title>
-    </ion-header>
-    <ion-content>
-      <ion-row>
-        <ion-col>
-          <ion-button class="graph-one"></ion-button>
-        </ion-col>
-        <ion-col>
-          <div class="graph-two"></div>
-        </ion-col>
-      </ion-row>
-    </ion-content>
-  </ion-card> -->
-  <!-- 
-  <app-explore-container name="Tab 1 page"></app-explore-container> -->
+ 
 </ion-content>

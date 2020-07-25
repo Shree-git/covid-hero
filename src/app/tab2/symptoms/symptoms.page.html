@@ -1,59 +1,69 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
     </ion-buttons>
     <ion-title>Symptoms</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p class="symptoms-para">
-    <u
-      >Symptoms may appear 2-14 days after exposure to the virus. People with
-      these symptoms may have COVID-19:</u
-    >
-    <br />
-    Fever or chills
-    <br />
-    Cough
-    <br />
-    Shortness of breath or difficulty breathing
-    <br />
-    Fatigue
-    <br />
-    Muscle or body aches
-    <br />
-    Headache
-    <br />
-    New loss of taste or smell
-    <br />
-    Sore throat
-    <br />
-    Congestion or runny nose
-    <br />
-    Nausea or vomiting
-    <br />
-    Diarrhea
-    <br /><br />
-    <u
-      >Look for emergency warning signs for COVID-19. If someone is showing any
-      of these signs, seek emergency medical care immediately:</u
-    >
-    <br />
-    Trouble breathing
-    <br />
-    Persistent pain or pressure in the chest
-    <br />
-    New confusion
-    <br />
-    Inability to wake or stay awake
-    <br />
-    Bluish lips or face
-    <br />
-  </p>
+  <ion-card >
+    <ion-card-content class="ion-text-center">
+      <h2>What are the Symptoms of COVID-19?</h2>
+
+      <h3>
+        Covid-19 shares many of its most common symptoms with other viruses with
+        symptoms ranging from mild to severe.
+      </h3>
+      <h3 style="font-weight: bold;">
+        Here are common symptoms to watch out for:
+      </h3>
+      <div style="display: flex;">
+        <div>
+         <img src="assets/iconsImage/Rectangle 17@2x.png">
+          <h3 style="font-weight: bold;">Fever/Chills</h3>
+        </div>
+        <div>
+          <img src="assets/iconsImage/Rectangle 15@2x.png">
+          <h3 style="font-weight: bold;">Cough</h3>
+        </div>
+        <div>
+          <img src="assets/iconsImage/Rectangle 16@2x.png">
+          <h3 style="font-weight: bold;">Difficulty Breathing</h3>
+        </div>
+      </div>
+      <h3>Symptoms may develop anywhere from</h3>
+      <h3 style="font-weight: 400;">2-14 days after exposure to the virus</h3>
+      <ion-button>Click here for a full list of symptoms</ion-button>
+      <ion-button>Take a Self-Assessment Test</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <h2>When should you seek Emergency Medical Attention?</h2>
+      <h3>Older adults and people who have severe underlying medical conditions like heart of lung 
+        disease or diabetes are at higher risk for developing more serious complications from COVID-19 illness.
+      </h3>
+      <h3>If anyone is showing these symptoms, please seek emergecy medical care immediately:</h3>
+      <h3 style="font-weight: bold;">Trouble Breathing</h3>
+      <h3 style="font-weight: bold;">Persistent Pain in Chest</h3>
+      <h3 style="font-weight: bold;">New Confusion</h3>
+      <h3 style="font-weight: bold;">Inability to wake or stay awake</h3>
+      <h3 style="font-weight: bold;">Bluish Lips or Face</h3>
+      <h5>This is not a full list of symptoms. If any other symptoms are severe or concerning to you, please contact your medical provider.</h5>
+      <ion-button>Contact Emergency Services</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <h2>Think You Need to Get Tested?</h2>
+      <h3>Closely monitor your symptoms. If your symptoms worsen or become severe, contact your doctor or seek emergecy care. If your symptoms remain 
+        mild but concerning, consider getting tested at a nearby testing center.
+      </h3>
+      <ion-button>Find a Testing Center</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>
-<ion-footer class="ion-text-center ion-margin-bottom">
-  <ion-button href="https://landing.google.com/screener/covid19?source=google">Take self-assesment here</ion-button>
-  <ion-button routerLink="/tabs/tab2/testing">Contact a testing center</ion-button>
-</ion-footer>
+

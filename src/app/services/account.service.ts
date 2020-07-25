@@ -19,8 +19,6 @@ export class AccountService {
     fName: '',
     lName: '',
     role: '',
-    darkTheme: null,
-    therapists: [],
     mobileNumber: ''
   }
   items: any
@@ -82,34 +80,10 @@ export class AccountService {
      
 }
 
-updateTheme(theme: boolean){
-  this.afStore.collection('accounts').doc<Account>(this.authService.user.uid).update({
-   
-    darkTheme: theme
 
-  }).then((
-    
-  ) =>{
-   this.account = {
-     id: this.authService.user.uid,
-     fName: this.account.fName,
-     lName: this.account.lName,
-   }
-   // this.location.back()
-  })
-}
+
 
 getAccount(): Account{
- // this.afStore.collection('users').doc(this.authService.user.uid).collection('accounts').
- // snapshotChanges().pipe(
- //   map(actions => {
- //     actions.map(a => {
- //       const data = a.payload.doc.data();
- //       this.account.fName = data.firstName
- //       this.account.lName = data.lastName
- //       this.account.id = a.payload.doc.id
- //     });
- //   }));
    this.afStore.collection('accounts').doc<Account>
    (this.authService.user.uid).
    valueChanges().pipe(

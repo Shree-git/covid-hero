@@ -3,7 +3,5 @@ export interface Account{
     fName: string;
     lName: string;
     role?: string;
-    darkTheme?: boolean;
-    therapists?: string[];
     mobileNumber?: string;
 }

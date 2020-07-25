@@ -8,12 +8,18 @@ import { PostReviewPageRoutingModule } from './post-review-routing.module';
 
 import { PostReviewPage } from './post-review.page';
 
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PostReviewPageRoutingModule
+
+    PostReviewPageRoutingModule,
+    MatButtonToggleModule
+
   ],
   declarations: [PostReviewPage]
 })

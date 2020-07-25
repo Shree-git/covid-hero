@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { RestaurantsService } from '../services/restaurants.service';
+
+
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Page implements OnInit {
 
-  constructor() { }
+  restaurantsData;
+  constructor(private rService: RestaurantsService) { }
 
   ngOnInit() {
+    this.restaurantsData = this.rService.getAllRestaurants();
   }
+
+  
 
 }

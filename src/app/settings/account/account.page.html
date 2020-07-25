@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="account.fName"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input
+        type="text"
+        [(ngModel)]="account.lName"
+      ></ion-input>
+      </ion-item>
+      
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input
+        type="text"
+        [(ngModel)]="account.mobileNumber"
+      ></ion-input>
+      </ion-item>
+      
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item routerLink="../change-email">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+        type="text"
+        [(ngModel)]="email"
+        readonly="true"
+      ></ion-input>
+      </ion-item>
+      
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col >
+      <ion-button expand="full"
+        (click)="updateAccount()"
+        color="tertiary"
+        [disabled]="account.fName=='' || account.lName==''"
+        >Save</ion-button
+      >
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-button expand="full" routerLink="../change-email" color="tertiary">Change Email</ion-button>
+
+    </ion-col>
+    <ion-col >
+      <ion-button expand="full" routerLink="../password-reset" color="tertiary">Change Password</ion-button>
+      
+    </ion-col>
+ </ion-row>
+</ion-content>
