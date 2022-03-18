@@ -1,5 +1,7 @@
 # Covid Hero
 
+Live demo: https://covid-detection-37cda.web.app/
+
 ## Key Tools, Libraries, and Frameworks
 Ionic Framework: An open-source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies — HTML, CSS, and JavaScript/Typescript
 
