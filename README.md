@@ -44,10 +44,10 @@ To tackle the By working with the Go-Team, we concluded that:
 - Once a basic version of these features was implemented, brief user testing was conducted. Our feedback was mostly positive, with people agreeing that they would definitely benefit from such an app being on their smartphone. 
 
 ## Key Metrics 
-Number of interviews : 15
-User Tests: 8
-Number of intent signed : 15
-$ collected : 0.00
+- Number of interviews : 15
+- User Tests: 8
+- Number of intent signed : 15
+- $ collected : 0.00
 
 ## Technical Architecture
 
